@@ -7,14 +7,55 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="500" Width="800">
     <Grid>
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition/>
-            <ColumnDefinition Width="159*"/>
-        </Grid.ColumnDefinitions>
-        <Border BorderBrush="Black" BorderThickness="1" Grid.ColumnSpan="2">
-            <Button x:Name="Button1" Content="I'm Useless" Margin="9,9,643,9" Click="Button_Click" FontSize="20"/>
-        </Border>
-        <TextBox x:Name="Textbox1" TextWrapping="Wrap" Text="The button does nothing... DON'T press it!!" Margin="163,39,32,39" Grid.Column="1" FontSize="72"/>
-
+        <Menu>
+            <MenuItem Header="_File">
+                <MenuItem Header="_New"/>
+                <MenuItem Header="_New Window"/>
+                <MenuItem Header="_Open...."/>
+                <MenuItem Header="_Save"/>
+                <MenuItem Header="_Save As"/>
+                <Separator></Separator>
+                <MenuItem Header="_Page Setup..."/>
+                <MenuItem Header="_Print..."/>
+                <Separator></Separator>
+                <MenuItem Header="_Exit"/>
+            </MenuItem>
+            <MenuItem Header="_Edit">
+                <MenuItem Header="_Undo"/>
+                <Separator></Separator>
+                <MenuItem Command="ApplicationCommands.Cut"/>
+                <MenuItem Command="ApplicationCommands.Copy"/>
+                <MenuItem Command="ApplicationCommands.Paste"/>
+                <MenuItem Command="ApplicationCommands.Delete"/>
+                <Separator></Separator>
+                <MenuItem Header="_Search With Bing..."/>
+                <MenuItem Header="_Find..."/>
+                <MenuItem Header="_Find Next"/>
+                <MenuItem Header="_Find Previous"/>
+                <MenuItem Header="_Replace..."/>
+                <MenuItem Header="_Go To..."/>
+                <Separator></Separator>
+                <MenuItem Header="_Select All"/>
+                <MenuItem Header="_Time/Date"/>
+            </MenuItem>
+            <MenuItem Header="_Format">
+                <MenuItem Header="_Word Wrap"/>
+                <MenuItem Header="_Font"/>
+            </MenuItem>
+            <MenuItem Header="_View">
+                <MenuItem Header="_Zoom"/>
+                <MenuItem Header="_Status Bar"/>
+            </MenuItem>
+            <MenuItem Header="_Help">
+                <MenuItem Header="_View Help"/>
+                <MenuItem Header="_Send Feedback"/>
+                <Separator></Separator>
+                <MenuItem Header="_About Notepad"/>
+            </MenuItem>
+        </Menu>
+        <TextBox Name="textBox1" TextWrapping="Wrap"
+         Margin="2,23,2,2">
+            The quick brown fox jumps over the lazy dog.
+        </TextBox>
     </Grid>
 </Window>
